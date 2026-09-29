@@ -2,7 +2,7 @@
 
 Native tools for inspecting Mach-O signing declarations, analyzing AArch64
 control flow, and running local browser workflows. Each project publishes its
-source provenance, reproducible examples and the scope of its verification.
+reproducible examples and the scope of its verification.
 
 ---
 
@@ -11,7 +11,6 @@ source provenance, reproducible examples and the scope of its verification.
 A C++20 library and CLI for Mach-O signing metadata, declared entitlements,
 hardening settings and resource seals. The [owned-binary example](https://github.com/dhtfish-98/MachOInspect/blob/main/docs/OWNED_BINARY_EXAMPLE.md)
 builds two fixtures and compares their declarations with Apple's `codesign`.
-This is a native rewrite of machoaudit with its MIT attribution retained.
 
 The inspector does not authenticate CMS, verify executable code pages or establish
 OS-granted permissions. `codesign` checks the signature; runtime permission grants
@@ -21,8 +20,7 @@ remain a separate question. See the [verification record](https://github.com/dht
 
 A C++20 library and CLI for AArch64 dispatch analysis and same-size branch
 rewriting, with a thin IDA adapter. The CLI produces separate snapshots; the
-adapter submits changes to an IDA database. The functional baseline is deflat64,
-based on DumpA1n's unflatten64, with inherited attribution retained.
+adapter submits changes to an IDA database.
 
 Known-vector and coverage checks bound what is accepted; they are not a proof for
 every input. The [IDA guide](https://github.com/dhtfish-98/A64Dispatch/blob/main/integrations/ida/README.md)
@@ -31,9 +29,8 @@ show the owned fixture and distinguish native tests from actual host checks.
 
 #### [ChromeRelay](https://github.com/dhtfish-98/ChromeRelay)
 
-A C++20 MCP bridge to an existing loopback Chrome DevTools endpoint, rewritten
-from UltimateBrowserJS with its provenance retained. It provides 54 canonical
-actions and 75 legacy names. The [local-page workflow](https://github.com/dhtfish-98/ChromeRelay/blob/main/docs/LOCAL_WORKFLOW.md)
+A C++20 MCP bridge to an existing loopback Chrome DevTools endpoint. It provides
+54 canonical actions and 75 legacy names. The [local-page workflow](https://github.com/dhtfish-98/ChromeRelay/blob/main/docs/LOCAL_WORKFLOW.md)
 fills a form, clicks once and reads the result.
 
 The [verification record](https://github.com/dhtfish-98/ChromeRelay/blob/main/validation/README.md)
