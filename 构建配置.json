@@ -1,0 +1,11 @@
+{
+  "schema": "project-build-layout.v1",
+  "project": "dhtfish-98",
+  "author": "dhtfish98",
+  "kind": "manual",
+  "base_public_commit": "e2fd54251bb17175015e44a231259ec244ebec5a",
+  "restored_inputs": [],
+  "platform_entries": [
+    "README.md"
+  ]
+}
